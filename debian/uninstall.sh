@@ -23,12 +23,16 @@ set -e
 case "$1" in
 	upgrade)
 	;;
-	remove|failed-upgrade|abort-install|abort-upgrade|disappear)
+	remove)
+		update-rc.d -f play-movied remove 2>&1 >> /dev/null
+	;;
+	failed-upgrade|abort-install|abort-upgrade|disappear)
 	;;
 
 	purge)
-		rm -rf /var/log/playmovie.log 2>&1 >> /dev/null
+		rm -rf /var/log/playmovied.log 2>&1 >> /dev/null
 		rm -rf /opt/tmp 2>&1 >> /dev/null
+		update-rc.d -f play-movie remove 2>&1 >> /dev/null
 	;;
 
 	*)

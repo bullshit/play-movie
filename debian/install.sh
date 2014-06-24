@@ -23,6 +23,7 @@ set -e
 case "$1" in
 
   configure)
+		insserv play-movied 2>&1 >> /dev/null
   ;;
 
   abort-upgrade|abort-remove|abort-deconfigure)

@@ -17,3 +17,6 @@ now add a autostart
 add following to /etc/rc.local
 
 ```nohup /opt/play-movie/playback.sh &```
+
+#### notes
+(c) Oskar Holowaty

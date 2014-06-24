@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #title           :global.sh
 #description     :load configuraton
 #author          :bullshit <me@oskarholowaty.com>
@@ -25,11 +25,11 @@ if [ -f /etc/default/play-movie ]; then
 	source /etc/default/play-movie
 	mkdir -p $DOWNLOAD_PATH >& /dev/null
 fi
-
+LOG_FILE="/var/log/playmovie.log"
 #
 # functions
 #
 log() {
         d=`date +"%b %d %H:%M:%S"`
-        echo "$d $1" >> $LOG_FILE
+        echo "$d [$1] $2" >> $LOG_FILE
 }
