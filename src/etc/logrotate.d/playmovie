@@ -1,0 +1,7 @@
+/var/log/play-movie.log {
+	weekly
+	copytruncate
+	rotate 4
+	compress
+	create 0666 root root
+}
