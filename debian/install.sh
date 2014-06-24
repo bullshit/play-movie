@@ -23,15 +23,6 @@ set -e
 case "$1" in
 
   configure)
-	echo "Please add a cronjob"
-	echo ""
-	echo "crontab -e"
-	echo "add following command"
-	echo "*/5 * * * * /opt/play-movie/cronjob.sh"
-	echo ""
-	echo "add the playback script to rc.local"
-	echo "nohup /opt/play-movie/playback.sh &"
-	echo ""
   ;;
 
   abort-upgrade|abort-remove|abort-deconfigure)
