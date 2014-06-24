@@ -9,7 +9,7 @@
 #bash_version    :4.2.37
 #==============================================================================
 
-source ./global.sh
+source /opt/play-movie/global.sh
 
 while true; do
 	omxplayer "$OMX_PLAYER_ARGS" "${DOWNLOAD_PATH}/${VIDEO_FILENAME}"

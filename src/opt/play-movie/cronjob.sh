@@ -10,7 +10,7 @@
 #==============================================================================
 
 # Script path withou slash
-source ./global.sh
+source /opt/play-movie/global.sh
 
 #
 # let's do it
