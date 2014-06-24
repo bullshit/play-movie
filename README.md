@@ -10,6 +10,6 @@ and add something like
 ```0/5 * * * * /opt/play-movie/cronjob.sh```
 this will start the cronjob every 5 minute
 
-know add on system startup the playback.sh file
+now add a autostart
 add following to /etc/rc.local
 ```nohup /opt/play-movie/playback.sh &```
