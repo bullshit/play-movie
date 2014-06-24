@@ -27,7 +27,7 @@ case "$1" in
 	echo ""
 	echo "crontab -e"
 	echo "add following command"
-	echo "0/5 * * * * /opt/play-movie/cronjob.sh"
+	echo "*/5 * * * * /opt/play-movie/cronjob.sh"
 	echo ""
 	echo "add the playback script to rc.local"
 	echo "nohup /opt/play-movie/playback.sh &"

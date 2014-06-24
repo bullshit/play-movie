@@ -9,7 +9,7 @@ after that add a cronjob with
 ```crontab -e``` 
 and add something like
 
-```0/5 * * * * /opt/play-movie/cronjob.sh```
+```*/5 * * * * /opt/play-movie/cronjob.sh```
 
 this will start the cronjob every 5 minute
 
