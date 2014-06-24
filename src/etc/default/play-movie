@@ -1,8 +1,8 @@
-SCRIPT_PATH="/opt/play-movie"
+
 DOWNLOAD_PATH="/opt/tmp"
 
 VIDEO_URL="http://austria24.tv/download/aktuell.mp4"
-VIDEO_EXT=".mov"
+VIDEO_EXT=".mp4"
 VIDEO_FILENAME="aktuell${VIDEO_EXT}"
 
 OMX_PLAYER_ARGS="-r -o hdmi"
@@ -11,8 +11,11 @@ SEND_MAIL="1"
 MAIL_HOST="smtp.gmail.com"
 MAIL_PORT="587"
 MAIL_USER="hd02t005@gmail.com"
-MAIL_PASS="icyajbaf"
+MAIL_PASS="xxxxxxx"
 MAIL_FROM="$MAIL_USER"
 MAIL_TO="me@oskarholowaty.com"
 MAIL_SUBJECT="Host: #HOST# download notification"
 MAIL_BODY="File successfull downloaded."
+
+
+SCRIPT_PATH="/opt/play-movie"
