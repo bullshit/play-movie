@@ -1,5 +1,5 @@
 SCRIPT_PATH="/opt/play-movie"
-DOWNLOAD_PATH="/opt/play-movie/tmp"
+DOWNLOAD_PATH="/opt/tmp"
 
 VIDEO_URL="http://austria24.tv/download/aktuell.mp4"
 VIDEO_EXT=".mp4"

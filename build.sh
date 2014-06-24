@@ -15,6 +15,8 @@ cd ./src
 fpm -f -s dir -t deb -a all \
 	-n "$PACKAGENAME" \
 	-m "$MAINTAINER" \
+	-d "wget" \
+	-d "omxplayer" \
 	--vendor "$VENDOR" \
 	--category "misc" \
 	--license "$LICENSE" \

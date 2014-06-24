@@ -22,11 +22,11 @@ if [[ -f "${SCRIPT_PATH}/block_cronjob" ]]; then
 	log "otherwise please remove the $SCRIPT_PATH/block_cronjob file "
 	exit 0
 fi
-touch $SCRIPT_PATH/block_cronjob 2>&1 >>  $LOG_FILE
+touch "${DOWNLOAD_PATH}/block_cronjob" 2>&1 >>  $LOG_FILE
 log "test with wget if file is newer"
 wget -N -P "$DOWNLOAD_PATH" -a $LOG_FILE "$VIDEO_URL"
 if [ $? -eq 0 ]; then
 	log "everything went fine"
 fi
-rm $SCRIPT_PATH/block_cronjob 2>&1 >>  $LOG_FILE
+rm "${DOWNLOAD_PATH}/block_cronjob" 2>&1 >>  $LOG_FILE
 exit 0

@@ -20,7 +20,8 @@ LOG_FILE="${DOWNLOAD_PATH}/cronjob.log"
 
 
 if [ -f /etc/default/play-movie ]; then
-	source /etc/default/play-movi
+	source /etc/default/play-movie
+	mkdir -p $DOWNLOAD_PATH >& /dev/null
 fi
 
 #
