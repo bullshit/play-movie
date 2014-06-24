@@ -24,9 +24,22 @@ if [[ -f "${SCRIPT_PATH}/block_cronjob" ]]; then
 fi
 touch "${DOWNLOAD_PATH}/block_cronjob" 2>&1 >>  $LOG_FILE
 log "test with wget if file is newer"
-wget -N -P "$DOWNLOAD_PATH" -a $LOG_FILE "$VIDEO_URL"
-if [ $? -eq 0 ]; then
-	log "everything went fine"
+#wget -N -P "$DOWNLOAD_PATH" -a $LOG_FILE "$VIDEO_URL"
+result=`wget --timestamping -r -P "$DOWNLOAD_PATH" "$VIDEO_URL" 2>&1 | (grep -q "not retrieving" || echo "1")`
+
+if [ "$result" == "1" ]; then
+	log "new file downloaded"
+
+	if [ "$SEND_MAIL" == "1" ]; then
+		/opt/play-movie/sendmail.py 2>&1 >>  $LOG_FILE
+		if [ $? -eq 0 ]; then 
+			log "send mail successfull"
+		else
+			log "error in sendmail.py"
+		fi
+	else
+		log "send mail feature disabled"
+	fi
 fi
 rm "${DOWNLOAD_PATH}/block_cronjob" 2>&1 >>  $LOG_FILE
 exit 0

@@ -17,6 +17,8 @@ fpm -f -s dir -t deb -a all \
 	-m "$MAINTAINER" \
 	-d "wget" \
 	-d "omxplayer" \
+	-d "python" \
+	-d "python-configobj" \
 	--vendor "$VENDOR" \
 	--category "misc" \
 	--license "$LICENSE" \

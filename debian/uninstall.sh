@@ -27,7 +27,7 @@ case "$1" in
 	;;
 
 	purge)
-		rm -rf /var/log/play-movie.log 2>&1 >> /dev/null
+		rm -rf /var/log/playmovie.log 2>&1 >> /dev/null
 		rm -rf /opt/tmp 2>&1 >> /dev/null
 	;;
 

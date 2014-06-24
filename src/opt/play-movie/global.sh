@@ -18,6 +18,8 @@ VIDEO_FILENAME="alt${VIDEO_EXT}"
 
 LOG_FILE="${DOWNLOAD_PATH}/cronjob.log"
 
+SEND_MAIL="0"
+
 
 if [ -f /etc/default/play-movie ]; then
 	source /etc/default/play-movie
