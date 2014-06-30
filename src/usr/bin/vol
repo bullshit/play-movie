@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# copied from http://www.dronkert.net/rpi/vol.html
+
 MIX=amixer
 declare -i LO=0     # Minimum volume; try 10 to avoid complete silence
 declare -i HI=100   # Maximum volume; try 95 to avoid distortion
