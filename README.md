@@ -104,14 +104,18 @@ MAIL_BODY ist die eigentliche Emailnachricht
 
 # Protokoll
 
-Der Downloader protokoliert alles in die datei /var/log/playmovie.log
+Der Downloader protokoliert alles in die datei /var/log/playmovie_cronjob.log. 
+Der play-movied service protokolliert in die Datei /var/log/playmovied.log
 
 Diese Datei wird wöchentlich kompromiert und für ein monat vorbehalten. 
 Dies kann in der Datei ```/etc/logrotate.d/playmovie``` geändert werden.
 
 # Abspielen in einer Dauerschleife
 Während der installation wird ein "Dienst" konfiguriert der mit "service play-movied start" gestartet werden kann.
-Dies passiert auch bei einem Neustart voll automatisch. (Vorsicht nach der installation ist der Dienst noch nicht gestartet)
+Dies passiert auch bei einem Neustart voll automatisch. (Vorsicht nach der installation ist der Dienst noch nicht gestartet). Hier wird auch die neu herunter geladene Datei "neu geladen".
+
+# Lautstärke
+Es wurde ein vol script integriert (/usr/bin/vol). Mittels diesem Skript wird die Lautstärke auf 95% eingestellt. (Siehe /etc/rc.local)
 
 
 
