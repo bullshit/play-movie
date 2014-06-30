@@ -40,7 +40,14 @@ if [[ "$result_en" == "1" || "$result_de" == "1" ]]; then
 	log "cronjob" "check successfull no file downloaded"
 else
 	log "cronjob" "new file downloaded"
-	touch "${DOWNLOAD_PATH}/new_file"
+	
+	# copy file
+	d=`date +%s`
+	f="${d}${VIDEO_EXT}"
+	log "cronjob" "copy new file"
+	cp "${DOWNLOAD_PATH}/${VIDEO_FILENAME}" "${DOWNLOAD_PATH}/${f}"
+
+	echo $f > "${DOWNLOAD_PATH}/new_file"
 	if [ "$SEND_MAIL" == "1" ]; then
 		/opt/play-movie/sendmail.py 2>&1 >>  $LOG_FILE
 		if [ $? -eq 0 ]; then 
