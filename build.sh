@@ -2,7 +2,7 @@
 PACKAGENAME="play-movie"
 MAINTAINER="Oskar Holowaty <me@oskarholowaty.com>"
 VENDOR="Oskar Holowaty <me@oskarholowaty.com>"
-VERSION="0.2"
+VERSION="0.2-1"
 URL="https://github.com/bullshit/play-movie"
 LICENSE=""
 DESCRIPTION="Install a video downloader and play it with omxplayer"
