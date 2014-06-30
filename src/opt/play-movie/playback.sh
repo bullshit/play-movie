@@ -35,7 +35,7 @@ while true; do
 		if [ -f "${DOWNLOAD_PATH}/${PLAYBACK_FILE}" ]; then
 			omxplayer $OMX_PLAYER_ARGS "${DOWNLOAD_PATH}/${PLAYBACK_FILE}" > /dev/null
 		else
-			log "playback" "video not avaiable"
+			log "playback" "video not available"
 			#omxplayer $OMX_PLAYER_ARGS "${SCRIPT_PATH}/na.mp4" > /dev/null
 		fi
 	fi
