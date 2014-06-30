@@ -45,8 +45,7 @@ else
 	d=`date +%s`
 	f="${d}${VIDEO_EXT}"
 	log "cronjob" "copy new file"
-	cp "${DOWNLOAD_PATH}/${VIDEO_FILENAME}" "${DOWNLOAD_PATH}/${f}"
-
+	cp "${DOWNLOAD_PATH}/${VIDEO_FILENAME}" "${DOWNLOAD_PATH}/${f}" > $LOG_FILE 2>&1 
 	echo $f > "${DOWNLOAD_PATH}/new_file"
 	if [ "$SEND_MAIL" == "1" ]; then
 		/opt/play-movie/sendmail.py 2>&1 >>  $LOG_FILE

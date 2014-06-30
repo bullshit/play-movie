@@ -27,9 +27,9 @@ while true; do
 			log "playback" "new file downloaded"
 			f=`cat "${DOWNLOAD_PATH}/new_file"`
 
-			log "playback" "move new file to standard playback filename"
-			mv "${DOWNLOAD_PATH}/${f}" "${DOWNLOAD_PATH}/${PLAYBACK_FILE}"
-			rm -f "${DOWNLOAD_PATH}/new_file"
+			log "playback" "move new file '${f}' to standard playback filename"
+			mv "${DOWNLOAD_PATH}/${f}" "${DOWNLOAD_PATH}/${PLAYBACK_FILE}" > $LOG_FILE 2>&1 
+			rm -f "${DOWNLOAD_PATH}/new_file" > $LOG_FILE 2>&1  
 			
 		fi
 		if [ -f "${DOWNLOAD_PATH}/${PLAYBACK_FILE}" ]; then
