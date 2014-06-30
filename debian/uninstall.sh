@@ -30,8 +30,8 @@ case "$1" in
 	;;
 
 	purge)
+		rm -rf /var/log/playmovie_cronjob.log 2>&1 >> /dev/null
 		rm -rf /var/log/playmovied.log 2>&1 >> /dev/null
-		rm -rf /opt/tmp 2>&1 >> /dev/null
 		update-rc.d -f play-movie remove 2>&1 >> /dev/null
 	;;
 
