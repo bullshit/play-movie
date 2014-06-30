@@ -1,5 +1,13 @@
-/var/log/play-movie.log {
+/var/log/playmovie_cronjob.log {
 	weekly
+	copytruncate
+	rotate 4
+	compress
+	create 0666 root root
+}
+
+/var/log/playmovied.log {
+	daily
 	copytruncate
 	rotate 4
 	compress
