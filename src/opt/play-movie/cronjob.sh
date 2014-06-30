@@ -17,9 +17,9 @@ source /opt/play-movie/global.sh
 #
 
 # check if cronjob is downloading
-if [[ -f "${SCRIPT_PATH}/block_cronjob" ]]; then
+if [[ -f "${DOWNLOAD_PATH}/block_cronjob" ]]; then
 	log "cronjob" "last cronjob doesn't finished, maybe because its downloading a huge file"
-	log "cronjob" "otherwise please remove the $SCRIPT_PATH/block_cronjob file "
+	log "cronjob" "otherwise please remove the ${DOWNLOAD_PATH}/block_cronjob file "
 	exit 0
 fi
 touch "${DOWNLOAD_PATH}/block_cronjob" 2>&1 >>  $LOG_FILE
